@@ -4,10 +4,7 @@ on: push
 
 jobs:
   testActionGithub:
-    runs-on: windows-latest
-    defaults:
-      run:
-        working-directory: ./index.js
+    runs-on: ubuntu-latest
     steps:
       - name: Active Npm install
         run: npm install
