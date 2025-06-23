@@ -1,1 +1,1 @@
-console.log('Hello motherf***ing world !');
+console.log('Hello f***ing world !');

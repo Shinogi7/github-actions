@@ -28,6 +28,6 @@ run  : npm run lint
 name : Générer le build
 run  : mkdir dist/ && echo "Build" > build.txt
 
-#Afficher un message de succès
+#fficher un message de succès
 name : Message de succès
 run  : echo "Build et tests réussis !"
