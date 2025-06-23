@@ -13,6 +13,8 @@ jobs:
       - name: Vérification de la syntaxe avec ESLint
         run: eslint --ext .js
       - name: Générer un artefact de build
-        run: mkdir dist/ && echo "Build" > build.txt
+        run:
+          mkdir -p dist
+          echo "Build" > build.txt
       - name: Message de fin
         run: echo "Message de fin d'action"
