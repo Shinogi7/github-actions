@@ -1,20 +1,33 @@
 # Le fichier YAML est à compléter
 
+name: CI Node.js
+
 on: push
 
 jobs:
-  testActionGithub:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Active Npm install
-        run: npm install
-      - name: Active Npm run test
-        run: npm run test
-      - name: Vérification de la syntaxe avec ESLint
-        run: eslint --ext .js
-      - name: Générer un artefact de build
-        run:
-          mkdir -p dist
-          echo "Build" > build.txt
-      - name: Message de fin
-        run: echo "Message de fin d'action"
+name: Checkout code
+uses: actions/checkout@v4
+
+Installer les dépendances
+name : Installer les dépendances
+run  : npm install
+
+Lancer les tests
+name: Lancer les tests
+run : npm test
+
+
+Vérifier la syntaxe avec ESLint
+name : Vérification ESLint
+run  : npm run lint
+
+Générer un build dans dist/
+name : Générer le build
+run  : mkdir dist/ && echo "Build" > build.txt
+
+Afficher un message de succès
+name : Message de succès
+run  : echo "Build et tests réussis !"
